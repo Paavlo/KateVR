@@ -1,0 +1,28 @@
+.nav {
+  &__logo_language {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: $marginNavItems;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 130%;
+    color: #fff;
+  }
+
+  &__btn-buy {
+    @include mainBtnStyle;
+  }
+}
