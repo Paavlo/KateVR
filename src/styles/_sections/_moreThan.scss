@@ -1,0 +1,52 @@
+.privileges {
+  margin: 50px 0 50px - $standardPaddingVertical;
+  display: grid;
+  grid-template: auto / repeat(4, auto);
+  column-gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+
+  @media screen and (max-width: $tabletSize) {
+    grid-template: auto / repeat(2, auto);
+  }
+
+  @media screen and (max-width: $mobileSize) {
+    grid-template: auto / repeat(1, auto);
+    text-align: left;
+  }
+
+  &__section {
+    background: #05040b;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  //width: 250px;
+
+  &__picture {
+    min-height: 84px;
+
+    @media screen and (max-width: $mobileSize) {
+      display: none;
+    }
+  }
+
+  &__point {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media screen and (max-width: $mobileSize) {
+      font-size: 18px;
+    }
+
+  }
+
+  &__description {
+    @include descriptionText(color, $mainGrayColor);
+  }
+}

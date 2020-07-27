@@ -1,1 +1,17 @@
-$c-gray: #eee;
+$contentDesktopSize: 85%;
+
+$bigDesktopSize: 1920px;
+$tabletSize: 800px;
+$mobileSize: 500px;
+$bigContentSize: 1450px;
+$desktopContentSize: 1060px;
+$tabletContentSize: 900px;
+$mobileContentSize: 280px;
+
+$standardPaddingVertical: 47px;
+$standardPaddingHorizon: 30px;
+$standardDesktopPadding: $standardPaddingVertical $standardPaddingHorizon;
+
+$marginNavItems: 34px;
+$mainBlueColor: #05c2df;
+$mainGrayColor: #929292;

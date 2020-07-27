@@ -5,9 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+
+    <header class="header">
+      <div class="container container__header">
+        <button class="btn-buy">
+          Buy Now
+        </button>
+
+        <div class="header__top">
+          <div class="nav__logo_language">
+            <img class="logo header__logo"
+                 src="images/Logotype.svg"
+                 alt="Logotype of product">
+            <label for="language" class="label__language">
+              <select class="nav__language"
+                      name="language"
+                      id="language">
+                <option value="En" selected>En</option>
+                <option value="Ru">Ru</option>
+              </select>
+            </label>
+          </div>
+          <input class="menu__toggle"
+                 id="menu_toggle"
+                 type="checkbox">
+          <label for="menu_toggle" class="menu__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a
+                  href=""
+                  class="nav__link"
+                  id="#about"
+                >
+                  About
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href=""
+                  class="nav__link"
+                  id="#tech"
+                >
+                  Tech
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href=""
+                  class="nav__link"
+                  id="#benefits"
+                >
+                  Benefits
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href=""
+                  class="nav__link"
+                  id="#contacts"
+                >
+                  Contacts
+                </a>
+              </li>
+              <li class="nav__item nav__item-btn">
+                <button class="nav__btn-buy">
+                  Buy Now
+                </button>
+              </li>
+
+
+              <li class="nav__item nav__item-mobile">
+                <a
+                  href=""
+                  class="nav__link"
+                >
+                  Language
+                </a>
+              </li>
+              <li class="nav__item nav__item-mobile">
+                <a
+                  href=""
+                  class="nav__link"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li class="nav__item nav__item-mobile">
+                <a
+                  href=""
+                  class="nav__link"
+                >
+                  Help
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="productDesc">
+          <img class="header__productImg"
+               src="images/header.svg"
+               alt="Product image">
+          <h1 class="productDesc__caption">
+            <span class="caption__standard-header">THE NEW START OF</span><br>
+            <span class="caption__quantum-header">VR LOCOMOTION</span>
+          </h1>
+
+          <div class="productDesc__info">
+            <p class="productDesc__text">
+              Discover the most comprehensive VR
+              Locomotion system, and unlock infinite
+              motion in any games on any platforms!
+            </p>
+
+            <span class="productDesc__price">1200$</span>
+            <div class="productDesc__video">
+              Play Video
+            </div>
+          </div>
+        </div>
+
+        <div class="header__bottom">
+          <ul class="nav__list nav__list-bottom">
+            <li class="nav-bot__item nav-bot__item-help">
+              <a href="" class="nav-bot__link">
+                FAQ
+              </a>
+              <a href="" class="nav-bot__link">
+                Help
+              </a>
+            </li>
+
+            <li class="nav-bot__item nav-bot__item-more">
+              <a href="" class="nav-bot__link nav-bot__link-more">
+                More
+              </a>
+            </li>
+
+            <li class="nav-bot__item nav-bot__item-slider">
+              <a href="" class="nav-bot__link">
+                Previous
+              </a>
+              <a href="" class="nav-bot__link">
+                Next
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+    <main>
+      <section class="privileges__section">
+        <div class="container">
+          <div class="caption">
+            <h2 class="caption__section caption__section-gaming">More than</h2>
+            <p class="caption__small">This also made for people who are interested in...</p>
+          </div>
+
+          <div class="privileges">
+            <div class="card">
+              <img class="card__picture"
+                   src="images/education.svg"
+                   alt="Education picture"
+              >
+              <h5 class="card__point">
+                Education
+              </h5>
+              <p class="card__description">
+                Create aducational simulations, trainings and much more with unlimited virtual
+                space and minimum physical space
+              </p>
+            </div>
+
+            <div class="card">
+              <img class="card__picture"
+                   src="images/estate.svg"
+                   alt="Real Estate picture"
+              >
+              <h5 class="card__point">
+                Real Estate
+              </h5>
+              <p class="card__description">
+                Desighn architectural projects in a deeply realistic environment allowing
+                visitors to freely walk around, and feel their vibe
+              </p>
+            </div>
+
+            <div class="card">
+              <img class="card__picture"
+                   src="images/fitness.svg"
+                   alt="Fitness picture"
+              >
+              <h5 class="card__point">
+                Fitness
+              </h5>
+              <p class="card__description">
+                Combine business with pleasure, and discover countless ways to stay fit
+                while playing your favorite VR Games!
+              </p>
+            </div>
+
+            <div class="card">
+              <img class="card__picture"
+                   src="images/social.svg"
+                   alt="Social Interactions picture"
+              >
+              <h5 class="card__point">
+                Social Interactions
+              </h5>
+              <p class="card__description">
+                Hang out with your friends in the virtual world when you can’t meet space requirements
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="about__section">
+        <div class="container">
+          <div class="product">
+            <h2 class="caption__section caption__section-product product__caption-mobile">About</h2>
+            <div class="product__slider">
+              <img class="product__picture"
+                   src="images/pocket_kat.jpg"
+                   alt="Pocket VR"
+              >
+              <div class="slider">
+                <a href="" class="slider__link">
+                  Previous
+                </a>
+                <span class="product__counter">1/5</span>
+                <a href="" class="slider__link">
+                  Next
+                </a>
+              </div>
+              <div class="slider-mobile">
+                <div class="slide slide-active"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+              </div>
+            </div>
+
+            <div class="product__about">
+              <h2 class="caption__section caption__section-product product__caption">About</h2>
+              <p class="product__description">
+                KAT loco is a foot-based VR locomotion system that gives complete physical control
+                over lower-body actions, allowing you to freely walk, run, and carry out just any
+                other movement in virtual reality.
+              </p>
+              <div class="product__video">
+                Play Video
+              </div>
+            </div>
+          </div>
+
+          <div class="additional">
+            <div class="additional__about">
+              <p class="caption__small">Hello,</p>
+              <h2 class="caption__section caption__section-you">Nice to meet</h2>
+              <p class="additional__description">
+                KAT VR is an independent company dedicated to the research, development, and sales
+                of VR Locomotion products and solutions. Founded in 2013, we have quickly grown to
+                become one of the world’s leading professional suppliers of VR games’ &
+                simulations’ equipment
+              </p>
+            </div>
+
+            <img
+              class="additional__picture-aboutUS"
+              src="images/about_us.svg"
+              alt="About Us picture">
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
