@@ -104,6 +104,7 @@
 }
 
 .specsM {
+
   &__sensor {
     @include specs_window;
     top: 62px;
@@ -123,6 +124,11 @@
   }
 
   &__item {
+    display: none;
+    @media screen and  (max-width: 1080px) {
+      display: block;
+    }
+
     &-sensor {
       @include specs-mobile;
       top: -20px;
@@ -176,8 +182,5 @@
         }
       }
     }
-  }
-  @media screen and  (max-width: 1080px) {
-    display: block;
   }
 }
