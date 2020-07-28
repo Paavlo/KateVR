@@ -105,3 +105,49 @@
     color: $mainBlueColor;
   }
 }
+
+@mixin specs-mobile {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  background: $mainBlueColor;
+  border-radius: 50%;
+  transition: 0.3s, background 0.5s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 22px;
+    height: 1px;
+    background: #fff;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(90deg);
+    width: 22px;
+    height: 1px;
+    background: #fff;
+  }
+  &:hover {
+    background: linear-gradient(180deg, $mainBlueColor, #110e25);
+  }
+}
+
+@mixin specs_window {
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  width: 250px;
+  background: #110e25;
+  transition: visibility ease 0s, opacity ease 1s;
+  z-index: 1;
+}

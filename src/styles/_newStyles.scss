@@ -26,6 +26,16 @@
     &-you {
       @include sectionsCaption(" You!");
     }
+
+    &-specs {
+      @include sectionsCaption(" Specs!");
+      padding-right: 10%;
+      text-align: right;
+
+      @media screen and (max-width: $tabletSize) {
+        text-align: left;
+      }
+    }
   }
 
   &__small {
