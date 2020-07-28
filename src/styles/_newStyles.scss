@@ -36,6 +36,13 @@
         text-align: left;
       }
     }
+
+    &-kat_loco {
+      @include sectionsCaption(" Kat Loco!");
+      @media screen and (max-width: $tabletSize) {
+        text-align: left;
+      }
+    }
   }
 
   &__small {
