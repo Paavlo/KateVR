@@ -41,36 +41,32 @@
             <ul class="nav__list">
               <li class="nav__item">
                 <a
-                  href=""
+                  href="#about__section"
                   class="nav__link"
-                  id="#about"
                 >
                   About
                 </a>
               </li>
               <li class="nav__item">
                 <a
-                  href=""
+                  href="#specs__section"
                   class="nav__link"
-                  id="#tech"
                 >
                   Tech
                 </a>
               </li>
               <li class="nav__item">
                 <a
-                  href=""
+                  href="#reason__section"
                   class="nav__link"
-                  id="#benefits"
                 >
                   Benefits
                 </a>
               </li>
               <li class="nav__item">
                 <a
-                  href=""
+                  href="#contact__section"
                   class="nav__link"
-                  id="#contacts"
                 >
                   Contacts
                 </a>
@@ -146,7 +142,7 @@
             </li>
 
             <li class="nav-bot__item nav-bot__item-more">
-              <a href="" class="nav-bot__link nav-bot__link-more">
+              <a href="#privileges__section" class="nav-bot__link nav-bot__link-more">
                 More
               </a>
             </li>
@@ -166,7 +162,7 @@
 
 
     <main>
-      <section class="privileges__section">
+      <section id="privileges__section" class="privileges__section">
         <div class="container">
           <div class="caption">
             <h2 class="caption__section caption__section-gaming">More than</h2>
@@ -233,7 +229,7 @@
         </div>
       </section>
 
-      <section class="about__section">
+      <section id="about__section" class="about__section">
         <div class="container">
           <div class="product">
             <h2 class="caption__section caption__section-product product__caption-mobile">About</h2>
@@ -294,7 +290,7 @@
         </div>
       </section>
 
-      <section class="specs__section">
+      <section id="specs__section" class="specs__section">
         <div class="container">
           <h2 class="caption caption__section-specs">Tech</h2>
 
@@ -375,7 +371,7 @@
         </div>
       </section>
 
-      <section class="reason__section">
+      <section id="reason__section" class="reason__section">
         <div class="container">
           <h2 class="caption caption__section-kat_loco">Why</h2>
 
@@ -431,7 +427,7 @@
         </div>
       </section>
 
-      <section class="contact__section">
+      <section id="contact__section" class="contact__section">
         <div class="container">
           <div class="contact">
             <div class="contact__info">
@@ -455,56 +451,72 @@
               </div>
             </div>
 
-            <form class="contact__form"
-              action="#"
-              method="post"
-            >
+            <div class="contact__form-container">
+              <div class="caption contact__caption contact__caption-mobile">
+                <p class="caption__small caption__small-questions">Have any questions?</p>
+                <h2 class="caption__section caption__section-touch">Get in</h2>
+              </div>
+              <form class="contact__form"
+                    action="#"
+                    method="post"
+              >
 
-              <label for="contact__name">
-                <input type="text"
-                       placeholder="Name*"
-                       class="contact__input"
-                       id="contact__name"
-                       maxlength="15"
-                       required
-                >
-              </label>
+                <label for="contact__name">
+                  <input type="text"
+                         placeholder="Name*"
+                         class="contact__input"
+                         id="contact__name"
+                         maxlength="15"
+                         required
+                  >
+                </label>
 
-              <label for="contact__email">
-                <input type="email"
-                       placeholder="Email*"
-                       class="contact__input"
-                       id="contact__email"
-                       maxlength="25"
-                       required
-                >
-              </label>
+                <label for="contact__email">
+                  <input type="email"
+                         placeholder="Email*"
+                         class="contact__input"
+                         id="contact__email"
+                         maxlength="25"
+                         required
+                  >
+                </label>
 
-              <label for="contact__tel">
-                <input type="tel"
-                       placeholder="Phone*"
-                       class="contact__input"
-                       id="contact__tel"
-                       required
-                >
-              </label>
+                <label for="contact__tel">
+                  <input type="tel"
+                         placeholder="Phone*"
+                         class="contact__input"
+                         id="contact__tel"
+                         required
+                  >
+                </label>
 
-              <label for="contact__message">
-                <textarea class="contact__message"
-                          placeholder="Message"
-                          name="contact__message"
-                          id="contact__message"
-                          cols="30"
-                          rows="10"
-               ></textarea>
-              </label>
+                <label for="contact__message">
+                  <textarea class="contact__message"
+                            placeholder="Message"
+                            name="contact__message"
+                            id="contact__message"
+                            cols="30"
+                            rows="10"
+                 ></textarea>
+                </label>
 
-              <button class="contact__submit" type="submit">
-                Contact Us
-              </button>
+                <button class="contact__submit" type="submit">
+                  Contact Us
+                </button>
 
-            </form>
+              </form>
+              <p class="contact__notification contact__notification-mobile">
+                Our manager will reply you within 15 minutes
+              </p>
+            </div>
+
           </div>
+        </div>
+      </section>
+
+      <section class="footer__section">
+        <div class="container">
+
         </div>
       </section>
     </main>

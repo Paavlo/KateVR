@@ -110,6 +110,29 @@
           bottom: -10px;
           transform: translateX(-50%);
           left: 50%;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            animation: slideMe infinite alternate 1s;
+          }
+        }
+      }
+
+      @keyframes slideMe {
+        0% {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+
+        50% {
+          transform: translateX(-50%) translateY(20px);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(10px);
+          opacity: 0.7;
         }
       }
 
