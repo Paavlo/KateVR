@@ -1,4 +1,5 @@
 .contact {
+  position: relative;
   display: flex;
   justify-content: space-between;
 
@@ -137,5 +138,60 @@
     &:hover {
       color: #fff;
     }
+  }
+}
+
+.toTop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  border: 1px solid $mainBlueColor;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $mainBlueColor;
+    top: 55%;
+    left: 45%;
+    transform-origin: left;
+    transform: translate(-50%) rotate(-40deg);
+    width: 10px;
+    height: 1px;
+    transition: 0.3s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: $mainBlueColor;
+    top: 55%;
+    left: 55%;
+    transform-origin: right;
+    transform: translate(-50%) rotate(40deg);
+    width: 10px;
+    height: 1px;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    border-color: #fff;
+
+    &::before,
+    &::after {
+      background: #fff;
+      animation: jumper infinite alternate 0.9s;
+    }
+  }
+
+  &__link {
+    display: contents;
+  }
+
+  @media screen and (max-width: $smallTabletSize) {
+    display: none;
   }
 }

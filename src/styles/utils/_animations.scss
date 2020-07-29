@@ -22,3 +22,13 @@
     color: $mainBlueColor;
   }
 }
+
+@keyframes jumper {
+  0% {
+    top: 55%;
+  }
+
+  100% {
+    top: 30%;
+  }
+}
