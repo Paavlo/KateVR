@@ -1,0 +1,34 @@
+@keyframes runner {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 25px;
+  }
+
+  100% {
+    left: 240px;
+    width: 2px;
+  }
+}
+
+@keyframes blinker {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: $mainBlueColor;
+  }
+}
+
+@keyframes jumper {
+  0% {
+    top: 55%;
+  }
+
+  100% {
+    top: 30%;
+  }
+}

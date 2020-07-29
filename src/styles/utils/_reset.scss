@@ -1,0 +1,29 @@
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: Mark-Regular, sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:visited {
+    text-underline: none;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

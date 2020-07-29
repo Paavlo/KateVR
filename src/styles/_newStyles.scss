@@ -1,0 +1,63 @@
+.caption {
+
+  margin-top: 80px - $standardPaddingVertical;
+  margin-bottom: 0;
+  text-align: center;
+
+  @media screen and (max-width: $tabletSize) {
+    margin-top: 70px - $standardPaddingVertical;
+  }
+
+  @media screen and (max-width: $mobileSize) {
+    margin-top: 50px - $standardPaddingVertical;
+  }
+
+  &__section {
+    margin: 0;
+
+    &-gaming {
+      @include sectionsCaption(" Gaming!");
+    }
+
+    &-product {
+      @include sectionsCaption(" Product");
+    }
+
+    &-you {
+      @include sectionsCaption(" You!");
+    }
+
+    &-specs {
+      @include sectionsCaption(" Specs!");
+      padding-right: 10%;
+      text-align: right;
+
+      @media screen and (max-width: $tabletSize) {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-kat_loco {
+      @include sectionsCaption(" Kat Loco!");
+      @media screen and (max-width: $tabletSize) {
+        text-align: left;
+      }
+    }
+
+    &-touch {
+      @include sectionsCaption(" Touch");
+    }
+  }
+
+  &__small {
+    margin: 14px 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: $mainBlueColor;
+
+    &-questions {
+      margin-top: 0;
+    }
+  }
+}

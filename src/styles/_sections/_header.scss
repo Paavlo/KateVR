@@ -1,0 +1,120 @@
+.header {
+  background: linear-gradient(118.69deg, #191536 0%, #000 100%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .menu__burger {
+    display: none;
+  }
+
+  .btn-buy {
+    display: none;
+    @include mainBtnStyle;
+    @include navigationText;
+
+    @media screen and (max-width: $tabletSize) {
+      display: block;
+      width: 90%;
+      position: fixed;
+
+      bottom: 31px;
+      left: 5%;
+      z-index: 3;
+      box-shadow: 0 54px 49px 37px rgba(0,0,0,0.51);
+      &:hover {
+        box-shadow: 0 54px 49px 37px rgba(0,0,0,0.51);
+      }
+    }
+  }
+
+  &__productImg {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    right: -10%;
+
+    @media screen and (max-width: $mobileSize) {
+      position: static;
+      display: flex;
+      width: 100vw;
+      transform: none;
+      height: 170px;
+      object-fit: cover;
+      margin: 0 -30px;
+      object-position: -20px;
+    }
+  }
+
+  &__logo {
+    width: 78px;
+    height: 18px;
+    margin-right: 20%;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.productDesc {
+  //position: relative;
+
+  &__caption {
+    font-size: 46px;
+    line-height: 130%;
+    font-family: Mark-Heavy, sans-serif;
+
+    @media screen and (max-width: $tabletSize) {
+      font-size: 26px;
+    }
+
+    @media screen and (min-width: $bigDesktopSize) {
+      font-size: 54px;
+    }
+
+    .caption {
+      &__standard-header {
+        color: #fff;
+      }
+
+      &__quantum-header {
+        font-family: Quantum, sans-serif;
+        color: $mainBlueColor;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tabletSize + 1) {
+    &__info {
+      margin-left: 92px;
+    }
+  }
+
+  @media screen and (max-width: $mobileSize) {
+    &__info {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include descriptionText(color, $mainGrayColor);
+    width: 340px;
+
+    @media screen and (max-width: $mobileSize) {
+      width: 100%;
+    }
+  }
+
+  &__price {
+    @include standardWhiteText;
+  }
+
+  &__video {
+    @include video_style;
+  }
+}

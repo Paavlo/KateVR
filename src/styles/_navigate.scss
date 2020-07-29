@@ -1,0 +1,165 @@
+.label__language {
+  position: relative;
+  &::before {
+    content: url("../images/Polygon.svg");
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.nav {
+  &__logo_language {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__language {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    font-family: Mark-Medium, sans-serif;
+    color: $mainBlueColor;
+    background: none;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;/* Chrome */
+    -moz-appearance: none;/* Firefox */
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    margin-left: $marginNavItems;
+    transition: 0.3s;
+
+    &:hover {
+      color: #929292;
+      transform: scale(1.1);
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include navigationText;
+    transition: 0.3s;
+
+    &:hover {
+      color: #929292;
+
+    }
+  }
+
+  &__btn-buy {
+    @include mainBtnStyle;
+    @include navigationText;
+  }
+
+  &-bot {
+    &__link {
+      @include descriptionText(color, inherit);
+      letter-spacing: 1px;
+      transition: 0.3s;
+
+      &:hover {
+        color: #929292;
+        transform: scale(1.1);
+      }
+
+      &-more {
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &__item {
+      padding-bottom: 5px;
+      &-help {
+        width: 96px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+      }
+
+      &-more {
+        position: relative;
+        color: $mainBlueColor;
+
+        &::before {
+          content: url("../images/Polygon.svg");
+          position: absolute;
+          bottom: -10px;
+          transform: translateX(-50%);
+          left: 50%;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            animation: slideMe infinite alternate 1s;
+          }
+        }
+      }
+
+      @keyframes slideMe {
+        0% {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+
+        50% {
+          transform: translateX(-50%) translateY(20px);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(10px);
+          opacity: 0.7;
+        }
+      }
+
+      &-slider {
+        position: relative;
+        width: 207px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          background: $mainBlueColor;
+          width: 32%;
+          height: 1px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: #212121;
+          width: 68%;
+          height: 1px;
+        }
+      }
+    }
+  }
+}

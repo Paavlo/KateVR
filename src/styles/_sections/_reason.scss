@@ -1,0 +1,36 @@
+.reason {
+
+  &__section {
+    background: linear-gradient(121.14deg, #191536 0%, #000 77.34%);
+  }
+
+  margin: 50px 0 50px - $standardPaddingVertical;
+  display: grid;
+  grid-template: auto / repeat(4, auto);
+  column-gap: 20px;
+  justify-content: space-between;
+  text-align: center;
+
+  @media screen and (max-width: $tabletSize) {
+    grid-template: auto / repeat(1, auto);
+  }
+
+  @media screen and (max-width: $mobileSize) {
+    grid-template: auto / repeat(1, auto);
+    text-align: left;
+  }
+
+  &__btn {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    @include mainBtnStyle;
+    @include navigationText;
+
+    @media screen and (max-width: $tabletSize) {
+      display: none;
+    }
+  }
+}

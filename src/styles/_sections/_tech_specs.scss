@@ -1,0 +1,191 @@
+.specs {
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  @media screen and (max-width: $tabletSize) {
+    margin-top: 20px;
+  }
+
+  &__section {
+    background: #05040b;
+  }
+
+  &__product {
+    position: relative;
+    display: flex;
+    margin-right: 115px;
+    background: url(".././images/specs_product.svg") no-repeat;
+    background-size: cover;
+    width: 297px;
+    height: 297px;
+
+    @media (max-width: 1080px) {
+      margin-right: 0;
+
+      .specs__line-desktop {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $mobileSize) {
+      width: 197px;
+      height: 194px;
+    }
+  }
+
+  &__caption {
+    @include standardWhiteText;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include descriptionText(color, $mainGrayColor);
+    margin: 0;
+  }
+
+  &__sensor {
+    position: absolute;
+    left: -30%;
+    top: -10%;
+  }
+  &__connection {
+    position: absolute;
+    left: -110%;
+    top: 90%;
+  }
+  &__batteries {
+    width: 340px;
+    position: absolute;
+    left: 109%;
+    top: -4%;
+  }
+
+  &__line {
+    &--sensor {
+      position: absolute;
+      left: -68%;
+      top: -15%;
+      width: 350px;
+      height: 72px;
+      background: url(".././images/sensor_line.png") no-repeat;
+      background-size: contain;
+    }
+
+    &--connection {
+      position: absolute;
+      left: -45%;
+      top: 20%;
+      width: 134px;
+      height: 113px;
+      background: url(".././images/connection_line.svg") no-repeat;
+      background-size: contain;
+    }
+
+    &--besides {
+      position: absolute;
+      left: -4%;
+      top: 14%;
+      width: 52px;
+      height: 201px;
+      background: url(".././images/line_besides_prod.svg") no-repeat;
+      background-size: contain;
+    }
+
+    &--batteries {
+      position: absolute;
+      right: -15%;
+      top: -20%;
+      width: 191px;
+      height: 245px;
+      background: url(".././images/battteries_line.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.specsM {
+
+  &__sensor {
+    @include specs_window;
+    top: 62px;
+    border-radius: 0 10% 10%;
+  }
+  &__connection {
+    @include specs_window;
+    left: 62px;
+    bottom: 0;
+    border-radius: 10% 10% 10% 0;
+  }
+  &__batteries {
+    @include specs_window;
+    bottom: 62px;
+    right: 0;
+    border-radius: 10% 10% 0;
+  }
+
+  &__item {
+    display: none;
+    @media screen and  (max-width: 1080px) {
+      display: block;
+    }
+
+    &-sensor {
+      @include specs-mobile;
+      top: -20px;
+      left: 30px;
+
+      &:hover {
+        background: linear-gradient(180deg, $mainBlueColor, #110e25);
+        border-radius: 50% 50% 0 0;
+
+        & .specsM {
+          &__sensor {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-connection {
+      @include specs-mobile;
+      bottom: 20px;
+      left: -25px;
+
+      &:hover {
+        background: linear-gradient(90deg, $mainBlueColor, #110e25);
+        border-radius: 50% 0 0 50%;
+
+        & .specsM {
+          &__connection {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-batteries {
+      @include specs-mobile;
+      bottom: 40%;
+      right: 10%;
+
+      &:hover {
+        background: linear-gradient(90deg, $mainBlueColor, #110e25);
+        border-radius: 0 0 50% 50%;
+
+        & .specsM {
+          &__batteries {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

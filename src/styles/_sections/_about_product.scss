@@ -1,0 +1,159 @@
+.about__section {
+  background: linear-gradient(151.42deg, #191536 -0.5%, #000 99.5%);
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__caption-mobile {
+    display: none;
+  }
+
+  &__slider {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: $mobileSize) {
+    flex-direction: column;
+    &__caption {
+      display: none;
+
+      &-mobile {
+        display: inline;
+      }
+    }
+
+    &__slider {
+      margin-right: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    min-width: 280px;
+  }
+
+  &__about {
+    width: 40%;
+    @media (max-width: $mobileSize) {
+      width: 100%;
+    }
+  }
+
+  &__counter {
+    font-size: 14px;
+    line-height: 18px;
+    color: $mainBlueColor;
+  }
+
+  &__description {
+    @include descriptionText (color, $mainGrayColor);
+  }
+
+  &__video {
+    @include video_style;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 207px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+
+  &-mobile {
+    display: none;
+    width: 44px;
+    justify-content: space-between;
+    margin: 14px auto 0;
+
+    .slide {
+      width: 4px;
+      height: 4px;
+      background: #ababab;
+      border-radius: 50%;
+
+      &-active {
+        background: #484848;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tabletSize) {
+    display: none;
+    &-mobile {
+      display: flex;
+    }
+  }
+
+  &__link {
+    @include descriptionText(color, inherit);
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $mainGrayColor;
+      transform: scale(1.1);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: $mainBlueColor;
+    width: 32%;
+    height: 1px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #212121;
+    width: 68%;
+    height: 1px;
+  }
+}
+
+.additional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 191px;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: $mobileSize) {
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+
+  &__about {
+    width: 40%;
+    min-width: 400px;
+    margin-right: 20px;
+    @media screen and (max-width: $mobileSize) {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    @include descriptionText(color, $mainGrayColor);
+  }
+
+  &__picture-aboutUS {
+    min-width: 360px;
+    min-height: 62px;
+    @media screen and (max-width: $mobileSize) {
+      display: none;
+    }
+  }
+}

@@ -4,3 +4,192 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin descriptionText ($_property, $_color) {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  #{$_property}: $_color;
+}
+
+@mixin navigationText {
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+@mixin standardWhiteText {
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+}
+
+@mixin mainBtnStyle {
+  position: relative;
+  width: 200px;
+  height: 48px;
+  background: $mainBlueColor;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $mainBlueColor;
+    background: #fff;
+
+    transform: scale(0.95);
+    box-shadow: inset 0 0 32px -5px rgb(6,84,94);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  &:hover::before {
+    border-radius: 4px;
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+
+  &:hover::after {
+    border-radius: 4px;
+    opacity: 1;
+    transform: scale(1,1);
+  }
+
+  &:active {
+    outline: 0;
+    background: #fff;
+    color: #05c2df;
+  }
+}
+
+@mixin sectionsCaption ($_content) {
+  font-family: Mark-Heavy, sans-serif;
+  font-size: 36px;
+  line-height: 46px;
+  color: #fff;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $tabletSize) {
+    font-size: 21px;
+    line-height: 27px;
+  }
+
+  &::after {
+    content: $_content;
+    font-family: Quantum, sans-serif;
+    color: $mainBlueColor;
+  }
+}
+
+@mixin specs-mobile {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  background: $mainBlueColor;
+  border-radius: 50%;
+  transition: 0.3s, background 0.5s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 22px;
+    height: 1px;
+    background: #fff;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(90deg);
+    width: 22px;
+    height: 1px;
+    background: #fff;
+  }
+  &:hover {
+    background: linear-gradient(180deg, $mainBlueColor, #110e25);
+  }
+}
+
+@mixin specs_window {
+  visibility: hidden;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  width: 250px;
+  background: #110e25;
+  transition: visibility ease 0s, opacity ease 1s;
+  z-index: 1;
+}
+
+@mixin video_style {
+  position: relative;
+  width: 256px;
+  height: 66px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: url(".././images/Play_video.svg") no-repeat;
+  background-size: contain;
+  @include navigationText;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+    animation: blinker infinite alternate 1s;
+
+    &::before {
+      content: "";
+      background: $mainBlueColor;
+      position: absolute;
+      height: 2px;
+      transform: rotate(0deg);
+      bottom: 10px;
+      left: 55px;
+      animation: runner infinite alternate 1s;
+    }
+
+    &::after {
+      content: "";
+      background: $mainBlueColor;
+      position: absolute;
+      height: 2px;
+      transform: rotate(0deg);
+      top: 12px;
+      left: 55px;
+      animation: runner infinite alternate 1s;
+    }
+  }
+}
