@@ -21,6 +21,10 @@
     }
   }
 
+  &__footer {
+    padding: 43px 30px;
+  }
+
   @media screen and (min-width: $bigDesktopSize) {
     max-width: $desktopContentSize;
   }

@@ -151,3 +151,45 @@
   transition: visibility ease 0s, opacity ease 1s;
   z-index: 1;
 }
+
+@mixin video_style {
+  position: relative;
+  width: 256px;
+  height: 66px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: url(".././images/Play_video.svg") no-repeat;
+  background-size: contain;
+  @include navigationText;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.7;
+    animation: blinker infinite alternate 1s;
+
+    &::before {
+      content: "";
+      background: $mainBlueColor;
+      position: absolute;
+      height: 2px;
+      transform: rotate(0deg);
+      bottom: 10px;
+      left: 55px;
+      animation: runner infinite alternate 1s;
+    }
+
+    &::after {
+      content: "";
+      background: $mainBlueColor;
+      position: absolute;
+      height: 2px;
+      transform: rotate(0deg);
+      top: 12px;
+      left: 55px;
+      animation: runner infinite alternate 1s;
+    }
+  }
+}

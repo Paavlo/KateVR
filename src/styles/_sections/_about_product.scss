@@ -55,21 +55,7 @@
   }
 
   &__video {
-    width: 256px;
-    height: 66px;
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background: url(".././images/Play_video.svg") no-repeat;
-    background-size: contain;
-    @include navigationText;
-    transition: 0.4s;
-
-    &:hover {
-      opacity: 0.7;
-    }
+    @include video_style;
   }
 }
 
@@ -146,6 +132,7 @@
 
   @media screen and (max-width: $mobileSize) {
     margin-top: 70px;
+    margin-bottom: 0;
   }
 
   &__about {

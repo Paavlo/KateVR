@@ -43,9 +43,7 @@
   }
 
   &__item {
-    &:not(:first-child) {
-      margin-left: $marginNavItems;
-    }
+    margin-left: $marginNavItems;
     transition: 0.3s;
 
     &:hover {

@@ -8,21 +8,52 @@
 
   &__info {
     width: 30%;
-
+    @media screen and (max-width: $smallTabletSize) {
+      display: none;
+    }
   }
 
   &__notification {
     @include descriptionText(color, $mainGrayColor);
     margin-bottom: 52px;
+    &-mobile {
+      display: none;
+    }
+    @media screen and (max-width: $smallTabletSize) {
+      &-mobile {
+        display: block;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__caption {
     text-align: left;
     margin-top: 0;
+    &-mobile {
+      display: none;
+    }
+    @media screen and (max-width: $smallTabletSize) {
+      &-mobile {
+        display: block;
+      }
+    }
   }
 
   &__form {
-    width: 50%;
+    @media screen and (max-width: $smallTabletSize) {
+      margin-top: 30px;
+    }
+
+    &-container {
+      width: 50%;
+
+      @media screen and (max-width: $smallTabletSize) {
+        width: 100%;
+      }
+    }
+
+    width: 100%;
     height: 418px;
     display: flex;
     flex-direction: column;
@@ -37,13 +68,19 @@
     line-height: 150%;
     color: $mainGrayColor;
     background: none;
-    border: none;
+    border: 0.1px;
     border-bottom: 1px solid #2f2f2f;
+    transition: 2s;
 
     &::placeholder {
       font-family: Mark-Regular, sans-serif;
       font-size: 14px;
       line-height: 150%;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, #05040b, #05040b,
+      #05040b, #05040b, #2f2f2f);
     }
   }
 
@@ -63,12 +100,25 @@
       font-size: 14px;
       line-height: 150%;
     }
+
+    &:hover {
+      background: linear-gradient(180deg, #05040b, #05040b,
+      #05040b, #05040b, #2f2f2f);
+    }
   }
 
   &__submit {
     @include mainBtnStyle;
     @include standardWhiteText;
     margin-top: 90px;
+    @media screen and (max-width: $smallTabletSize) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: $smallTabletSize) {
+    flex-direction: column;
   }
 }
 

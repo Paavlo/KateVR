@@ -1,5 +1,69 @@
 .footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: $tabletSize) {
+    padding-bottom: 74px - 30;
+  }
+
   &__section {
     background: #000;
+  }
+
+  &__logo {
+    width: 72px;
+    height: 14px;
+  }
+
+  &__nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__connections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .connection-way-footer {
+    display: none;
+  }
+
+  &__icon-container {
+    width: 103px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: $smallTabletSize) {
+    padding: (74px - 30) 0;
+    &__logo {
+      position: absolute;
+      top: 0;
+    }
+
+    &__nav__list {
+      height: 100px;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .nav__item {
+        margin-left: 0;
+      }
+    }
+
+    .connection-way-footer {
+      display: flex;
+      font-size: 13px;
+      line-height: 16px;
+      height: 72px;
+    }
+
+    &__icon-container {
+      width: 100%;
+    }
   }
 }
